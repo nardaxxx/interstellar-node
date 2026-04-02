@@ -32,7 +32,7 @@ def fetch_peers_from_github():
 
 def get_public_ip():
     try:
-with urllib.request.urlopen("https://api.ipify.org?format=json", timeout=5) as r:
+        with urllib.request.urlopen("https://api.ipify.org?format=json", timeout=5) as r:
             data = json.loads(r.read().decode())
             return data["ip"], 5353
     except:
